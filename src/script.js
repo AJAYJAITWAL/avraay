@@ -1,10 +1,10 @@
 // ========== DATA ==========
 const categories = [
-  { id: 1, name: "Needle Felt(Needle Punched Felt Filter Fabric)", slug: "pulse-jet-filter-fabrics", icon: "zap", image: "src/assets/images/c1p51.webp", description: "Specially woven for pulse-jet cleaning systems with excellent dust release properties and long service life.", shortDesc: "Optimized for pulse-jet cleaning systems" },
+  { id: 1, name: "Needle Felt(Needle Punched Felt Filter Fabric)", slug: "pulse-jet-filter-fabrics", icon: "zap", image: "src/assets/images/c1p51.webp", description: "Specially woven for pulse-jet cleaning systems with excellent dust release properties and long service life.", shortDesc: "Needle felt roll goods for Polyester, Acrylic, PPS, Aramid, Fiberglass, PTFE, p84" },
+  { id: 2, name: "PTFE Product", slug: "bag-house-filter-media", icon: "home", image: "src/assets/images/c1p11.webp", description: "Complete range of filter bag media for industrial baghouse dust collectors in various weights and treatments.", shortDesc: "Supply a range of related PTFE products, such as PTFE staple fiber, PTFE filament, PTFE scrim, PTFE membrane, PTFE sewing..." },
   { id: 4, name: "Scrim", slug: "ptfe-membrane-laminated", icon: "layers", image: "src/assets/images/c4p71.webp", description: "Fiberglass fabrics laminated with PTFE membrane for near-zero emission performance.", shortDesc: "Near-zero emission surface filtration" },
-  { id: 2, name: "PTFE Product", slug: "bag-house-filter-media", icon: "home", image: "src/assets/images/c1p11.webp", description: "Complete range of filter bag media for industrial baghouse dust collectors in various weights and treatments.", shortDesc: "Complete baghouse dust collector solutions" },
-  { id: 3, name: "Filter Bag Accessories", slug: "flue-gas-filter-fabrics", icon: "cloud", image: "src/assets/images/c1p21.webp", description: "Acid and alkali resistant filter fabrics for flue gas desulfurization and waste incineration.", shortDesc: "For flue gas & incineration systems" },
   { id: 0, name: "Fiberglass Filter Fabric", slug: "high-temperature-filter-bags", icon: "flame", image: "src/assets/images/c0p11.webp", description: "Engineered for continuous operation at extreme temperatures up to 280°C. Ideal for cement, steel, and power generation industries.", shortDesc: "For extreme heat applications up to 280°C" },
+  { id: 3, name: "Filter Bag Accessories", slug: "flue-gas-filter-fabrics", icon: "cloud", image: "src/assets/images/c1p21.webp", description: "Acid and alkali resistant filter fabrics for flue gas desulfurization and waste incineration.", shortDesc: "For flue gas & incineration systems" },
 ];
 
 const products = [
@@ -55,12 +55,12 @@ const totalSlides = 3;
 let slideInterval;
 const heroTexts = [
   {
-    heading: 'Manufacturer of <span class="gold-gradient">High Performance</span> Technical Textiles',
+    heading: 'High Performance <span class="gold-gradient">Technical Textiles</span>',
     sub: 'Delivering premium technical textile solutions engineered for durability, efficiency, and reliable performance across diverse industrial applications worldwide.'
   },
   {
-    heading: 'Fiberglass <span class="gold-gradient">Filter fabric</span> For air filtration',
-    sub: 'Advanced fiberglass filter fabrics designed to ensure high filtration efficiency, low emissions, and long-lasting performance in demanding industrial environments.'
+    heading: 'Filter fabric <span class="gold-gradient">For air filtration</span>',
+    sub: 'Advanced filter fabrics designed to ensure high filtration efficiency, low emissions, and long-lasting performance in demanding industrial environments.'
   },
   {
     heading: 'High temperature <span class="gold-gradient">Fabrics for thermal</span>',
@@ -77,7 +77,7 @@ function updateCarousel() {
   document.querySelectorAll('.carousel-dot').forEach((d, i) => d.classList.toggle('active', i === currentSlide));
   const c = document.getElementById('heroContent');
   if (c && heroTexts[currentSlide]) {
-    c.querySelector('h1').innerHTML = heroTexts[currentSlide].heading;
+    c.querySelector('h6').innerHTML = heroTexts[currentSlide].heading;
     c.querySelector('p').textContent = heroTexts[currentSlide].sub;
     c.querySelectorAll('.hero-text-line').forEach((el, i) => { el.style.animation = 'none'; el.offsetHeight; el.style.animation = `heroTextReveal 1s cubic-bezier(0.23,1,0.32,1) ${0.3 + i * 0.2}s forwards`; });
   }
@@ -729,7 +729,7 @@ function renderCategoryPage(category) {
 
 // ========== RENDER GRIDS ==========
 function renderProductsGrid() {
-  document.getElementById('productsGrid').innerHTML = products.slice(0, 8).map((p, i) => {
+  document.getElementById('productsGrid').innerHTML = products.slice(0, 12).map((p, i) => {
     const cat = categories.find(c => c.id === p.categoryId);
     return `<a href="/?product=${p.id}" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${(i % 4) + 1}">
             <div class="aspect-[4/3] overflow-hidden relative">
