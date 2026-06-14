@@ -657,7 +657,7 @@ function renderProductPage(product) {
                 <h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"><div class="section-line"></div>Related Products</h2>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     ${products.filter(p => p.categoryId === product.categoryId && p.id !== product.id).slice(0, 3).map(p => `
-                    <a href="/?product=${p.id}" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer">
+                    <a href="/?product=${p.id}" target="_blank" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer">
                         <div class="aspect-[3/2] overflow-hidden"><img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover"></div>
                         <div class="p-5">
                             <p class="text-xs text-gold-600 font-medium mb-1.5">${categories.find(c => c.id === p.categoryId).name}</p>
@@ -713,7 +713,7 @@ function renderCategoryPage(category) {
             <h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-10">All Products <span class="text-gray-400 font-normal text-lg">(${cp.length})</span></h2>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 ${cp.map((p, i) => `
-                <a href="/?product=${p.id}" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${i + 1}">
+                <a href="/?product=${p.id}" target="_blank" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${i + 1}">
                     <div class="aspect-[4/3] overflow-hidden relative">
                         <img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent"></div>
@@ -737,7 +737,7 @@ function renderCategoryPage(category) {
 function renderProductsGrid() {
   document.getElementById('productsGrid').innerHTML = products.slice(0, 12).map((p, i) => {
     const cat = categories.find(c => c.id === p.categoryId);
-    return `<a href="/?product=${p.id}" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${(i % 4) + 1}">
+    return `<a href="/?product=${p.id}" target="_blank" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${(i % 4) + 1}">
             <div class="aspect-[4/3] overflow-hidden relative">
                 <img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
