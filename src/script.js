@@ -559,6 +559,12 @@ const producTable = {
             </div>`,
 }
 
+function assetPath(p) {
+  if (!p) return '';
+  if (p.startsWith('http') || p.startsWith('//') || p.startsWith('/')) return p;
+  return p.replace(/^.*\/?src\/assets\/images\//, '/assets/images/');
+}
+
 // ========== PRODUCT PAGE ==========
 function renderProductPage(product) {
   let html = '';
@@ -579,10 +585,10 @@ function renderProductPage(product) {
             <div class="grid lg:grid-cols-2 gap-10 lg:gap-16">
                 <div class="anim-slide-left">
                     <div class="relative rounded-2xl overflow-hidden mb-4 aspect-[4/3] bg-gray-50 shadow-sm">
-                        <img id="mainGalleryImg" src="${product.images[0]}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-700">
+                        <img id="mainGalleryImg" src="${assetPath(product.images[0])}" alt="${product.name}" class="w-full h-full object-cover transition-transform duration-700">
                     </div>
                     <div class="grid grid-cols-4 gap-3">
-                        ${product.images.map((img, i) => `<button onclick="changeGalleryImage('${img}',this)" class="gallery-thumb rounded-xl overflow-hidden aspect-square ${i === 0 ? 'active' : ''} bg-gray-50"><img src="${img}" alt="" class="w-full h-full object-cover"></button>`).join('')}
+                        ${product.images.map((img, i) => `<button onclick="changeGalleryImage('${assetPath(img)}',this)" class="gallery-thumb rounded-xl overflow-hidden aspect-square ${i === 0 ? 'active' : ''} bg-gray-50"><img src="${assetPath(img)}" alt="" class="w-full h-full object-cover"></button>`).join('')}
                     </div>
                 </div>
                 <div class="anim-slide-right delay-2">
@@ -652,7 +658,7 @@ function renderProductPage(product) {
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     ${products.filter(p => p.categoryId === product.categoryId && p.id !== product.id).slice(0, 3).map(p => `
                     <a href="/?product=${p.id}" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer">
-                        <div class="aspect-[3/2] overflow-hidden"><img src="${p.image}" alt="${p.name}" class="card-img w-full h-full object-cover"></div>
+                        <div class="aspect-[3/2] overflow-hidden"><img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover"></div>
                         <div class="p-5">
                             <p class="text-xs text-gold-600 font-medium mb-1.5">${categories.find(c => c.id === p.categoryId).name}</p>
                             <h3 class="text-gray-800 font-semibold mb-2">${p.name}</h3>
@@ -691,7 +697,7 @@ function renderCategoryPage(category) {
             </div>
         </div>
         <div class="relative h-[280px] sm:h-[380px] overflow-hidden">
-            <img src="${category.image}" alt="${category.name}" class="w-full h-full object-cover">
+            <img src="${assetPath(category.image)}" alt="${category.name}" class="w-full h-full object-cover">
             <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/50 to-gray-900/20"></div>
             <div class="absolute inset-0 flex items-end">
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-10 w-full">
@@ -709,7 +715,7 @@ function renderCategoryPage(category) {
                 ${cp.map((p, i) => `
                 <a href="/?product=${p.id}" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${i + 1}">
                     <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="${p.image}" alt="${p.name}" class="card-img w-full h-full object-cover">
+                        <img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent"></div>
                         <div class="absolute top-3 right-3"><span class="px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider gold-bg text-white shadow-lg shadow-gold-500/20">${category.name.split(' ').slice(0, 2).join(' ')}</span></div>
                     </div>
@@ -733,7 +739,7 @@ function renderProductsGrid() {
     const cat = categories.find(c => c.id === p.categoryId);
     return `<a href="/?product=${p.id}" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${(i % 4) + 1}">
             <div class="aspect-[4/3] overflow-hidden relative">
-                <img src="${p.image}" alt="${p.name}" class="card-img w-full h-full object-cover">
+                <img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 <div class="absolute top-3 left-3"><span class="px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/90 backdrop-blur text-gold-700 border border-gold-200 shadow-sm">${cat.name.split(' ').slice(0, 2).join(' ')}</span></div>
             </div>
@@ -762,7 +768,7 @@ function renderCategoriesGrid() {
 function renderBlogGrid() {
   document.getElementById('blogGrid').innerHTML = blogPosts.map((b, i) => `
     <div class="blog-card anim-fade-up delay-${(i % 3) + 1}">
-        <div class="aspect-[16/10] overflow-hidden"><img src="${b.image}" alt="${b.title}" class="blog-img w-full h-full object-cover"></div>
+        <div class="aspect-[16/10] overflow-hidden"><img src="${assetPath(b.image)}" alt="${b.title}" class="blog-img w-full h-full object-cover"></div>
         <div class="p-6">
             <div class="flex items-center gap-3 mb-3">
                 <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-gold-50 text-gold-700 border border-gold-100">${b.category}</span>
