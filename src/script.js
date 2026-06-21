@@ -1,10 +1,10 @@
 // ========== DATA ==========
 const categories = [
-  { id: 1, name: "Needle Felt(Needle Punched Felt Filter Fabric)", slug: "pulse-jet-filter-fabrics", icon: "zap", image: "src/assets/images/c1p51.webp", description: "Specially woven for pulse-jet cleaning systems with excellent dust release properties and long service life.", shortDesc: "Needle felt roll goods for Polyester, Acrylic, PPS, Aramid, Fiberglass, PTFE, p84" },
-  { id: 2, name: "PTFE Product", slug: "bag-house-filter-media", icon: "home", image: "src/assets/images/c1p11.webp", description: "Complete range of filter bag media for industrial baghouse dust collectors in various weights and treatments.", shortDesc: "Supply a range of related PTFE products, such as PTFE staple fiber, PTFE filament, PTFE scrim, PTFE membrane, PTFE sewing..." },
+  { id: 1, name: "Needle Felt(Needle Punched Felt Filter Fabric)", slug: "pulse-jet-filter-fabrics", icon: "layers", image: "src/assets/images/c1p51.webp", description: "Specially woven for pulse-jet cleaning systems with excellent dust release properties and long service life.", shortDesc: "Needle felt roll goods for Polyester, Acrylic, PPS, Aramid, Fiberglass, PTFE, p84" },
+  { id: 2, name: "PTFE Product", slug: "bag-house-filter-media", icon: "layers", image: "src/assets/images/c1p11.webp", description: "Complete range of filter bag media for industrial baghouse dust collectors in various weights and treatments.", shortDesc: "Supply a range of related PTFE products, such as PTFE staple fiber, PTFE filament, PTFE scrim, PTFE membrane, PTFE sewing..." },
   { id: 4, name: "Scrim", slug: "ptfe-membrane-laminated", icon: "layers", image: "src/assets/images/c4p71.webp", description: "Fiberglass fabrics laminated with PTFE membrane for near-zero emission performance.", shortDesc: "Near-zero emission surface filtration" },
-  { id: 0, name: "Fiberglass Filter Fabric", slug: "high-temperature-filter-bags", icon: "flame", image: "src/assets/images/c0p11.webp", description: "Engineered for continuous operation at extreme temperatures up to 280°C. Ideal for cement, steel, and power generation industries.", shortDesc: "For extreme heat applications up to 280°C" },
-  { id: 3, name: "Filter Bag Accessories", slug: "flue-gas-filter-fabrics", icon: "cloud", image: "src/assets/images/c1p21.webp", description: "Acid and alkali resistant filter fabrics for flue gas desulfurization and waste incineration.", shortDesc: "For flue gas & incineration systems" },
+  { id: 0, name: "Fiberglass Filter Fabric", slug: "high-temperature-filter-bags", icon: "layers", image: "src/assets/images/c0p11.webp", description: "Engineered for continuous operation at extreme temperatures up to 280°C. Ideal for cement, steel, and power generation industries.", shortDesc: "For extreme heat applications up to 280°C" },
+  { id: 3, name: "Filter Bag Accessories", slug: "flue-gas-filter-fabrics", icon: "layers", image: "src/assets/images/c1p21.webp", description: "Acid and alkali resistant filter fabrics for flue gas desulfurization and waste incineration.", shortDesc: "For flue gas & incineration systems" },
 ];
 
 const products = [
@@ -38,6 +38,21 @@ const products = [
   { id: 27, name: "Aramid (Nomex) scrim", categoryId: 4, image: "src/assets/images/c4p61.jpg", images: ["src/assets/images/c4p61.jpg", "src/assets/images/c4p62.jpg", "src/assets/images/c4p63.jpg", "src/assets/images/c4p64.jpg"], shortDesc: "Heavy-duty pulse jet fabric for abrasive dust and high air-to-cloth ratios.", description: "The PJ-700 Heavy Duty is built for the toughest pulse-jet applications where abrasive dust, high filtration velocities, and aggressive cleaning pressures are the norm.", specs: { "Material": "E-Fiberglass + PTFE+Sb₂O₃", "Operating Temp": "260°C Continuous / 290°C Peak", "Weight": "700 g/m²", "Thickness": "2.4 mm", "Air Permeability": "12-16 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2800 N/5cm", "Tensile Strength (Weft)": "> 2200 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Abrasion resistant weave", "High air-to-cloth ratio", "Enhanced PTFE treatment", "Anti-static option", "Superior bag-to-cage compatibility"], applications: ["Mining and minerals", "Foundry operations", "Coal handling", "Asphalt production", "Recycling facilities"] },
   { id: 28, name: "PTFE scrim", categoryId: 4, image: "src/assets/images/c4p71.webp", images: ["src/assets/images/c4p71.webp", "src/assets/images/c4p72.webp", "src/assets/images/c4p73.webp", "src/assets/images/c4p74.webp"], shortDesc: "Heavy-duty pulse jet fabric for abrasive dust and high air-to-cloth ratios.", description: "The PJ-700 Heavy Duty is built for the toughest pulse-jet applications where abrasive dust, high filtration velocities, and aggressive cleaning pressures are the norm.", specs: { "Material": "E-Fiberglass + PTFE+Sb₂O₃", "Operating Temp": "260°C Continuous / 290°C Peak", "Weight": "700 g/m²", "Thickness": "2.4 mm", "Air Permeability": "12-16 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2800 N/5cm", "Tensile Strength (Weft)": "> 2200 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Abrasion resistant weave", "High air-to-cloth ratio", "Enhanced PTFE treatment", "Anti-static option", "Superior bag-to-cage compatibility"], applications: ["Mining and minerals", "Foundry operations", "Coal handling", "Asphalt production", "Recycling facilities"] },
   { id: 29, name: "P84 scrim", categoryId: 4, image: "src/assets/images/c4p81.jpg", images: ["src/assets/images/c4p81.jpg", "src/assets/images/c4p82.jpg", "src/assets/images/c4p83.jpg", "src/assets/images/c4p84.jpg"], shortDesc: "Heavy-duty pulse jet fabric for abrasive dust and high air-to-cloth ratios.", description: "The PJ-700 Heavy Duty is built for the toughest pulse-jet applications where abrasive dust, high filtration velocities, and aggressive cleaning pressures are the norm.", specs: { "Material": "E-Fiberglass + PTFE+Sb₂O₃", "Operating Temp": "260°C Continuous / 290°C Peak", "Weight": "700 g/m²", "Thickness": "2.4 mm", "Air Permeability": "12-16 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2800 N/5cm", "Tensile Strength (Weft)": "> 2200 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Abrasion resistant weave", "High air-to-cloth ratio", "Enhanced PTFE treatment", "Anti-static option", "Superior bag-to-cage compatibility"], applications: ["Mining and minerals", "Foundry operations", "Coal handling", "Asphalt production", "Recycling facilities"] },
+];
+
+const list = [
+  { id: 2, name: "Polyester (PE) needle felt", categoryId: 1, image: "src/assets/images/c1p11.webp", images: ["src/assets/images/c1p11.webp", "src/assets/images/c1p12.webp", "src/assets/images/c1p13.webp", "src/assets/images/c1p14.webp"], shortDesc: "Lightweight fiberglass fabric optimized for high-frequency pulse-jet cleaning.", description: "The PJ-550 is specifically engineered for pulse-jet dust collection systems where frequent cleaning cycles demand exceptional flex resistance and dust release properties.", specs: { "Material": "E-Fiberglass + Anti-acid Treatment", "Operating Temp": "240°C Continuous / 270°C Peak", "Weight": "550 g/m²", "Thickness": "1.9 mm", "Air Permeability": "15-20 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2200 N/5cm", "Tensile Strength (Weft)": "> 1800 N/5cm", "Filtration Efficiency": "> 99.8% @ 2μm", "Available Width": "Customizable up to 2.0m" }, features: ["Optimized for pulse-jet systems", "Excellent flex fatigue resistance", "Rapid dust cake release", "Low pressure drop", "Cost-effective"], applications: ["General dust collection", "Wood processing", "Food processing", "Pharmaceutical manufacturing", "Grain handling"] },
+  { id: 26, name: "PPS scrim", categoryId: 4, image: "src/assets/images/c4p51.jpg", images: ["src/assets/images/c4p51.jpg", "src/assets/images/c4p52.jpg", "src/assets/images/c4p53.jpg", "src/assets/images/c4p54.jpg"], shortDesc: "Heavy-duty pulse jet fabric for abrasive dust and high air-to-cloth ratios.", description: "The PJ-700 Heavy Duty is built for the toughest pulse-jet applications where abrasive dust, high filtration velocities, and aggressive cleaning pressures are the norm.", specs: { "Material": "E-Fiberglass + PTFE+Sb₂O₃", "Operating Temp": "260°C Continuous / 290°C Peak", "Weight": "700 g/m²", "Thickness": "2.4 mm", "Air Permeability": "12-16 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2800 N/5cm", "Tensile Strength (Weft)": "> 2200 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Abrasion resistant weave", "High air-to-cloth ratio", "Enhanced PTFE treatment", "Anti-static option", "Superior bag-to-cage compatibility"], applications: ["Mining and minerals", "Foundry operations", "Coal handling", "Asphalt production", "Recycling facilities"] },
+  { id: 18, name: "Aramid (Nomex) needle felt", categoryId: 1, image: "src/assets/images/c1p81.webp", images: ["src/assets/images/c1p81.webp", "src/assets/images/c1p82.webp", "src/assets/images/c1p83.webp", "src/assets/images/c1p84.webp"], shortDesc: "Heavy-duty pulse jet fabric for abrasive dust and high air-to-cloth ratios.", description: "The PJ-700 Heavy Duty is built for the toughest pulse-jet applications where abrasive dust, high filtration velocities, and aggressive cleaning pressures are the norm.", specs: { "Material": "E-Fiberglass + PTFE+Sb₂O₃", "Operating Temp": "260°C Continuous / 290°C Peak", "Weight": "700 g/m²", "Thickness": "2.4 mm", "Air Permeability": "12-16 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2800 N/5cm", "Tensile Strength (Weft)": "> 2200 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Abrasion resistant weave", "High air-to-cloth ratio", "Enhanced PTFE treatment", "Anti-static option", "Superior bag-to-cage compatibility"], applications: ["Mining and minerals", "Foundry operations", "Coal handling", "Asphalt production", "Recycling facilities"] },
+  { id: 10, name: "Homopolymer acrylic scrim", categoryId: 4, image: "src/assets/images/c4p31.jpg", images: ["src/assets/images/c4p31.jpg", "src/assets/images/c4p32.jpg", "src/assets/images/c4p33.jpg", "src/assets/images/c4p34.jpg"], shortDesc: "Advanced acid-resistant fabric with PTFE coating for extreme environments.", description: "The AR-720 Advanced combines deep-penetrating acid treatment with PTFE surface coating for maximum chemical protection in aggressive environments.", specs: { "Material": "E-Fiberglass + Acid + PTFE Coating", "Operating Temp": "240°C Continuous / 280°C Peak", "Weight": "720 g/m²", "Thickness": "2.5 mm", "Air Permeability": "10-14 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 3000 N/5cm", "Tensile Strength (Weft)": "> 2400 N/5cm", "Filtration Efficiency": "> 99.95% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Dual acid + PTFE protection", "Extreme chemical resistance", "Moisture resistant", "Self-cleaning surface", "Maximum service life"], applications: ["Waste incineration", "Chemical plant exhaust", "Metal smelting", "Paper mill recovery", "Refinery FCC"] },
+  { id: 24, name: "PTFE (Teflon) needle felt", categoryId: 2, image: "src/assets/images/c2p41.webp", images: ["src/assets/images/c2p41.webp", "src/assets/images/c2p42.webp", "src/assets/images/c2p43.webp", "src/assets/images/c2p44.webp"], shortDesc: "Heavy-duty pulse jet fabric for abrasive dust and high air-to-cloth ratios.", description: "The PJ-700 Heavy Duty is built for the toughest pulse-jet applications where abrasive dust, high filtration velocities, and aggressive cleaning pressures are the norm.", specs: { "Material": "E-Fiberglass + PTFE+Sb₂O₃", "Operating Temp": "260°C Continuous / 290°C Peak", "Weight": "700 g/m²", "Thickness": "2.4 mm", "Air Permeability": "12-16 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2800 N/5cm", "Tensile Strength (Weft)": "> 2200 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Abrasion resistant weave", "High air-to-cloth ratio", "Enhanced PTFE treatment", "Anti-static option", "Superior bag-to-cage compatibility"], applications: ["Mining and minerals", "Foundry operations", "Coal handling", "Asphalt production", "Recycling facilities"] },
+  { id: 4, name: "PTFE scrim", categoryId: 2, image: "src/assets/images/c2p11.webp", images: ["src/assets/images/c2p11.webp", "src/assets/images/c2p12.webp", "src/assets/images/c2p13.webp", "src/assets/images/c2p14.webp"], shortDesc: "Versatile baghouse filter media for a wide range of industrial applications.", description: "The BH-600 Standard is our most versatile baghouse filter media, delivering reliable performance across a broad spectrum of industrial applications with multiple treatment options.", specs: { "Material": "E-Fiberglass, Various Treatments", "Operating Temp": "220°C Continuous / 260°C Peak", "Weight": "600 g/m²", "Thickness": "2.1 mm", "Air Permeability": "12-18 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2500 N/5cm", "Tensile Strength (Weft)": "> 2000 N/5cm", "Filtration Efficiency": "> 99.85% @ 2μm", "Available Width": "Customizable up to 2.2m" }, features: ["Versatile multi-application", "Multiple treatment options", "Consistent quality", "Easy fabrication", "Competitive pricing"], applications: ["General baghouse filtration", "Building materials", "Chemical processing", "Metallurgy", "Paper industry"] },
+  { id: 5, name: "PTFE membrane", categoryId: 2, image: "src/assets/images/c2p21.webp", images: ["src/assets/images/c2p21.webp", "src/assets/images/c2p22.webp", "src/assets/images/c2p23.webp", "src/assets/images/c2p24.webp"], shortDesc: "Premium heavyweight baghouse media for maximum filtration efficiency.", description: "The BH-750 Premium combines a dense weave structure with advanced multi-stage treatment for the highest filtration efficiency and longest service life.", specs: { "Material": "E-Fiberglass + Multi-stage Treatment", "Operating Temp": "250°C Continuous / 280°C Peak", "Weight": "750 g/m²", "Thickness": "2.6 mm", "Air Permeability": "10-14 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 3200 N/5cm", "Tensile Strength (Weft)": "> 2600 N/5cm", "Filtration Efficiency": "> 99.95% @ 1μm", "Available Width": "Customizable up to 2.4m" }, features: ["Maximum filtration efficiency", "Extended bag life", "Multi-stage treatment", "Low pressure drop", "Premium QA"], applications: ["Power generation", "Hazardous waste incineration", "Cement grinding", "Gypsum production", "Emission control"] },
+  { id: 23, name: "PTFE Sewing Thread", categoryId: 2, image: "src/assets/images/c2p31.jpeg", images: ["src/assets/images/c2p31.jpeg", "src/assets/images/c2p32.jpeg", "src/assets/images/c2p33.jpeg", "src/assets/images/c2p34.jpeg"], shortDesc: "Heavy-duty pulse jet fabric for abrasive dust and high air-to-cloth ratios.", description: "The PJ-700 Heavy Duty is built for the toughest pulse-jet applications where abrasive dust, high filtration velocities, and aggressive cleaning pressures are the norm.", specs: { "Material": "E-Fiberglass + PTFE+Sb₂O₃", "Operating Temp": "260°C Continuous / 290°C Peak", "Weight": "700 g/m²", "Thickness": "2.4 mm", "Air Permeability": "12-16 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2800 N/5cm", "Tensile Strength (Weft)": "> 2200 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Abrasion resistant weave", "High air-to-cloth ratio", "Enhanced PTFE treatment", "Anti-static option", "Superior bag-to-cage compatibility"], applications: ["Mining and minerals", "Foundry operations", "Coal handling", "Asphalt production", "Recycling facilities"] },
+  { id: 0, name: "750g/m2 woven fiberglass fabric 22oz", categoryId: 0, image: "src/assets/images/c0p11.webp", images: ["src/assets/images/c0p11.webp", "src/assets/images/c0p12.webp", "src/assets/images/c0p13.webp", "src/assets/images/c0p14.webp"], shortDesc: "Woven fiberglass is a kind of filter material for high temperature application.", description: "Woven fiberglass is a kind of filter material for high temperature application. It's made by drawing-spinning-warping-texturizing-weaving-finishing-laminating processes. Because of its excellent performance like high temperature resistance (260℃), high tensile strength, high oxygen and corrosion resistance and long service lifetime, it can be widely used in dust filtration in cement plant, power plant, carbon black plant, steel plant, incinerator, etc.", specs: { "Material": "E-Fiberglass + SiO₂ Treatment", "Operating Temp": "260°C Continuous / 300°C Peak", "Weight": "800 g/m²", "Thickness": "2.8 mm", "Air Permeability": "10-15 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 3000 N/5cm", "Tensile Strength (Weft)": "> 2500 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Silica treatment for enhanced heat resistance", "Low shrinkage under thermal cycling", "Excellent acid resistance", "Smooth surface for easy dust release", "Custom sizes available"], applications: ["Cement kiln dust collection", "Lime production", "Carbon black industry", "Metal processing", "Power generation"] },
+  { id: 11, name: "340g/m2 woven fiberglass fabric 9oz", categoryId: 0, image: "src/assets/images/c0p31.webp", images: ["src/assets/images/c0p31.webp", "src/assets/images/c0p32.webp", "src/assets/images/c0p33.webp", "src/assets/images/c0p34.webp"], shortDesc: "Mid-weight high-temp bag balancing performance and cost-effectiveness.", description: "The FT-780 fills the gap between standard and premium offerings with balanced weight-to-performance ratio at a competitive price point.", specs: { "Material": "E-Fiberglass + SiO₂ Treatment", "Operating Temp": "240°C Continuous / 270°C Peak", "Weight": "780 g/m²", "Thickness": "2.6 mm", "Air Permeability": "11-15 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 2900 N/5cm", "Tensile Strength (Weft)": "> 2300 N/5cm", "Filtration Efficiency": "> 99.9% @ 1μm", "Available Width": "Customizable up to 2.2m" }, features: ["Balanced cost-performance", "Silica heat treatment", "Good chemical resistance", "Dimensional stability", "Standard lead time"], applications: ["Cement clinker cooling", "Quicklime production", "Foundry", "Brick manufacturing", "Aggregate processing"] },
+  { id: 1, name: "470g/m2 glass fiber cloth for reverse air filter bag 14oz", categoryId: 0, image: "src/assets/images/c0p21.webp", images: ["src/assets/images/c0p21.webp", "src/assets/images/c0p22.webp", "src/assets/images/c0p23.webp", "src/assets/images/c0p24.webp"], shortDesc: "Ultra high-temp fiberglass bag rated for 280°C continuous with PTFE impregnation.", description: "The FT-850 Super Heat features a dual-treatment process combining silica coating with PTFE impregnation, delivering unmatched performance at sustained temperatures of 280°C with peak capability up to 320°C.", specs: { "Material": "E-Fiberglass + SiO₂ + PTFE", "Operating Temp": "280°C Continuous / 320°C Peak", "Weight": "850 g/m²", "Thickness": "3.0 mm", "Air Permeability": "8-12 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 3500 N/5cm", "Tensile Strength (Weft)": "> 2800 N/5cm", "Filtration Efficiency": "> 99.95% @ 1μm", "Available Width": "Customizable up to 2.4m" }, features: ["Dual silica + PTFE treatment", "Self-cleaning surface", "Extended service life", "Superior dimensional stability", "Chemical resistant"], applications: ["Steel sinter plants", "Glass manufacturing", "Waste incineration", "Petroleum coke calcining", "Ferrous metal processing"] },
+  { id: 8, name: "Polyester scrim", categoryId: 4, image: "src/assets/images/c4p11.jpg", images: ["src/assets/images/c4p11.jpg", "src/assets/images/c4p12.jpg", "src/assets/images/c4p13.jpg", "src/assets/images/c4p14.jpg"], shortDesc: "Premium PTFE membrane laminated fabric for critical emission control.", description: "The PM-900 features high-density fiberglass laminated with ePTFE membrane delivering surface filtration with exceptional efficiency for sub-micron particles.", specs: { "Material": "High-density Fiberglass + ePTFE", "Operating Temp": "260°C Continuous / 300°C Peak", "Weight": "900 g/m² + membrane", "Thickness": "3.2 mm", "Air Permeability": "5-8 m³/m²/min @ 200Pa", "Tensile Strength (Warp)": "> 3800 N/5cm", "Tensile Strength (Weft)": "> 3000 N/5cm", "Filtration Efficiency": "> 99.995% @ 0.3μm", "Available Width": "Customizable up to 2.4m" }, features: ["True surface filtration", "Sub-micron capture", "Low pressure drop", "Hydrophobic membrane", "Emission compliance"], applications: ["Power plant emission control", "Cement emission standards", "Steel particulate control", "Pharmaceutical clean rooms", "Food processing"] },
 ];
 
 const blogPosts = [
@@ -88,7 +103,7 @@ resetInterval();
 // ========== NAVIGATION ==========
 let currentPage = 'home';
 
-function navigateTo(page, data) {
+function navigateTo(page, data, replaceHistory = false) {
   document.getElementById('page-home').classList.add('hidden');
   document.getElementById('page-product').classList.add('hidden');
   document.getElementById('page-category').classList.add('hidden');
@@ -99,7 +114,66 @@ function navigateTo(page, data) {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   lucide.createIcons();
   setTimeout(() => { initScrollAnimations(); }, 100);
+
+    try {
+      let newUrl;
+      if (page === 'home') {
+        newUrl = '/';
+      } else if (page === 'product' && data && data.id != null) {
+        newUrl = `/?product=${encodeURIComponent(data.id)}`;
+      } else if (page === 'category' && data && data.id != null) {
+        newUrl = `/?category=${encodeURIComponent(data.id)}`;
+      } else {
+        newUrl = '/';
+      }
+      const current = window.location.pathname + window.location.search;
+      if (current !== newUrl) {
+        if (replaceHistory) history.replaceState({ page, id: data?.id }, '', newUrl);
+        else history.pushState({ page, id: data?.id }, '', newUrl);
+      }
+    } catch (err) {
+      // ignore history errors on restricted environments
+      console.warn('history update failed', err);
+    }
 }
+
+window.addEventListener('popstate', (e) => {
+  const params = new URLSearchParams(window.location.search);
+  const pid = params.get('product');
+  const cid = params.get('category');
+  if (pid) {
+    const prod = products.find(p => String(p.id) === String(pid));
+    if (prod) navigateTo('product', prod, true);
+    else navigateTo('home', null, true);
+  } else if (cid) {
+    const cat = categories.find(c => String(c.id) === String(cid));
+    if (cat) navigateTo('category', cat, true);
+    else navigateTo('home', null, true);
+  } else {
+    navigateTo('home', null, true);
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  renderProductsGrid();
+  renderCategoriesGrid();
+  renderBlogGrid();
+  lucide.createIcons();
+  initScrollAnimations();
+  animateCounters();
+
+  const params = new URLSearchParams(window.location.search);
+  const pid = params.get('product');
+  if (pid) {
+    const prod = products.find(p => String(p.id) === String(pid));
+    if (prod) {
+      navigateTo('product', prod, true);
+      return;
+    }
+  }
+
+  navigateTo('home', null, true);
+});
 
 function scrollToSection(id) {
   if (currentPage !== 'home') { navigateTo('home'); setTimeout(() => { const el = document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 150); }
@@ -735,7 +809,7 @@ function renderCategoryPage(category) {
 
 // ========== RENDER GRIDS ==========
 function renderProductsGrid() {
-  document.getElementById('productsGrid').innerHTML = products.slice(0, 12).map((p, i) => {
+  document.getElementById('productsGrid').innerHTML = list.slice(0, 12).map((p, i) => {
     const cat = categories.find(c => c.id === p.categoryId);
     return `<a href="/?product=${p.id}" target="_blank" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${(i % 4) + 1}">
             <div class="aspect-[4/3] overflow-hidden relative">
