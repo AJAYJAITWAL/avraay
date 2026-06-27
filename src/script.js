@@ -350,6 +350,23 @@ const productDescriptions = {
         <p class="text-gray-500 leading-relaxed">Application: Waste incineration, Chemical, etc.</p>
       </div>`,
   20: ``,
+  21: ``,
+  22: ``,
+  23: ``,
+  24: `<div class="mb-10">
+        <p class="text-gray-500 leading-relaxed">Layer: PTFE</p>
+        <p class="text-gray-500 leading-relaxed">Scrim: PTFE</p>
+        <p class="text-gray-500 leading-relaxed">Available weight: 750g/m², 800g/m², 850g/m²</p>
+        <p class="text-gray-500 leading-relaxed">Treatment: PTFE finish, e-PTFE membrane laminated</p>
+        <p class="text-gray-500 leading-relaxed">Service temperature: 240&deg;C continuous, 260&deg;C maximum</p>
+        <p class="text-gray-500 leading-relaxed">Regular width: 2m - 2.2m</p>
+        <p class="text-gray-500 leading-relaxed">Application: Waste incineration, Chemical, etc.</p>
+      </div>`,
+  25: ``,
+  26: ``,
+  27: ``,
+  28: ``,
+  29: ``,
 }
 
 const producTable = {
@@ -641,7 +658,6 @@ function assetPath(p) {
 
 // ========== PRODUCT PAGE ==========
 function renderProductPage(product) {
-  let html = '';
   const cat = categories.find(c => c.id === product.categoryId);
   document.getElementById('page-product').innerHTML = `
     <div class="page-transition">
@@ -666,79 +682,33 @@ function renderProductPage(product) {
                     </div>
                 </div>
                 <div class="anim-slide-right delay-2">
-                    <span class="text-xs font-semibold uppercase tracking-wider text-gold-600">${cat.name}</span>
-                    <h1 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">${product.name}</h1>
-                    <p class="text-gray-500 leading-relaxed mb-8">${product.description}</p>
-                    <div class="flex flex-wrap gap-4 mb-10">
-                        <a href="javascript:void(0)" onclick="scrollToSection('quote')" class="btn-gold px-7 py-3 rounded-xl text-sm inline-flex items-center gap-2"><span>Request Quote</span><i data-lucide="arrow-right" class="w-4 h-4 relative z-[2]"></i></a>
-                        <a href="javascript:void(0)" onclick="scrollToSection('contact')" class="btn-outline px-7 py-3 rounded-xl text-sm inline-flex items-center gap-2">Contact Us</a>
-                    </div>
+                  <span class="text-xs font-semibold uppercase tracking-wider text-gold-600">${cat.name}</span>
+                  <h1 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 mt-2 mb-4">${product.name}</h1>
+                  <p class="text-gray-500 leading-relaxed mb-8">${product.description}</p>
+                  <div class="flex flex-wrap gap-4 mb-10">
+                    <a href="javascript:void(0)" onclick="scrollToSection('quote')" class="btn-gold px-7 py-3 rounded-xl text-sm inline-flex items-center gap-2"><span>Request Quote</span><i data-lucide="arrow-right" class="w-4 h-4 relative z-[2]"></i></a>
+                    <a href="javascript:void(0)" onclick="scrollToSection('contact')" class="btn-outline px-7 py-3 rounded-xl text-sm inline-flex items-center gap-2">Contact Us</a>
+                  </div>
                      
-                    ${productDescriptions[product.id] || ''}
+                  ${productDescriptions[product.id] || ''}
 
                 </div>
             </div>
-             ${producTable[product.id] || ''}
+            ${producTable[product.id] || ''}
             <div class="mt-12 sm:mt-16 anim-fade-up">
-                <h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"><div class="section-line"></div>Woven fiberglass feature:</h2>
-                <div class="mb-5">
-                    <div class="mb-10">
-                        <p class="text-gray-500 leading-relaxed">1. High temperature resistance</p>
-                        <p class="text-gray-500 leading-relaxed">Woven fiberglass filter cloth can be used continuously between above the acid dew point and 260&deg;C, and the maximum temperature resistance can reach 280&deg;C. For the burning particles and sparks generated instantly, the filter material will not burn. Glass fiber cloth is baked in an oven at 280&deg;C for 2 hours, and the physical and chemical indicators and color basically remain unchanged, which is not available in other filter materials.</p>
-                    </div>
-                    <div class="mb-10">
-                        <p class="text-gray-500 leading-relaxed">2. High strength and low elongation, stable size</p>
-                        <p class="text-gray-500 leading-relaxed">The warp and weft strength of the woven glass filter fabric is more than 2000N, and it will not shrink under high temperature, almost maintain the original size, and will not affect the filtering and cleaning performance. The elongation rate of woven glass is less than 3%. During the filtration operation, the weight of the filter material plus the weight of the dust layer will not cause the filter bag to elongate, and it also greatly reduces the periodic breakage of the filter bag caused by air pressure cleaning.</p>
-                    </div>
-                    <div class="mb-10">
-                        <p class="text-gray-500 leading-relaxed">3. High filtering precision</p>
-                        <p class="text-gray-500 leading-relaxed">The PTFE membrane on the surface of fiberglass filter fabric are small and uniform (0.10-2.0μm), which can separate all dust larger than the diameter of the micropores, and has a very high collection efficiency for PM10 (respirable dust) and PM2.5 (respirable dust) which seriously damage human health. Therefore, the dust purification efficiency is high and stable, and it is easy to achieve the emission standard of less than 20mg/m&sup3;, 10mg/m&sup3;, even 5mg/m&sup3;.</p>
-                    </div>
-                    <div class="mb-10">
-                        <p class="text-gray-500 leading-relaxed">4. Thin and soft, easy to clean</p>
-                        <p class="text-gray-500 leading-relaxed">The thickness of the woven fiberglass is less than 0.8mm according to different weight of fabric. This is only 1/3 of the needle felt filter material. It is woven with texturized yarn and has a soft texture. The glass fiber cloth shakes in a serpentine shape during dust cleaning, and the dust is easy to peel off; the pressure of dust removal is small, and the number of times of dust removal is small, which effectively reduces the consumption of compressed air, reduces maintenance, and saves operating costs.</p>
-                    </div>
-                    <div class="mb-10">
-                        <p class="text-gray-500 leading-relaxed">5. Oxidation and corrosion resistance</p>
-                        <p class="text-gray-500 leading-relaxed">Fiberglass filter cloth will not be oxidized by oxygen or nitride, so there is no need to consider the problem of high and low oxygen content in the dust collector. The woven glass cloth has outstanding corrosion resistance, and after the filter material is impregnated with PTFE, the PTFE will form a dense protective film on the surface of glass fiber cloth, so the fiberglass cloth is less eroded during operation.</p>
-                    </div>
-                    <div class="mb-10">
-                        <p class="text-gray-500 leading-relaxed">6. Excellent folding resistance</p>
-                        <p class="text-gray-500 leading-relaxed">The base material of woven fiberglass filter fabric is woven with glass yarns, and after scientific chemical post-treatment, the folding resistance is several times higher than that of ordinary filter material, and it can withstand long-term shrinkage and expansion without causing damage to the filter material, ensuring the service life of the filter material.</p>
-                    </div>
-                    <div class="mb-10">
-                        <p class="text-gray-500 leading-relaxed">7. Water and oil repellent, suitable for working conditions with high moisture content</p>
-                        <p class="text-gray-500 leading-relaxed">Glass fiber filter cloth has very good hydrolysis resistance. The base material has been treated with water and oil repellent technology. After application testing, the waterproof level is not less than 4.5, which eliminates the adsorption of water by the filter material and effectively reduces the hardening phenomenon after condensation.</p>
-                    </div>
-                </div>
-                <h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"><div class="section-line"></div>Manufacturing Roll goods at Hongyuan Envirotech</h2>
-                <div class="mb-5">
-                    <p class="text-gray-500 leading-relaxed">With experienced production team and high-tech machinery, Hongyuan Envirotech produce roll goods made of fiberglass and chemical fibers. More than 20 years production experience means we make can produce quality materials to meet market needs. Each fiber features specific properties that make the filter medium uniquely suited to its field of application. Filter media can be specially developed according to the needs of customers and different application conditions.</p>
-                </div>
-                <h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"><div class="section-line"></div>Filter Media Roll goods for Dust filtration</h2>
-                <div class="mb-5">
-                    <ul class="list-disc list-inside text-gray-500 leading-relaxed mb-5">
-                        <li>Fiberglass fabric with and without e-PTFE membrane</li>
-                        <li>Needle felt with and without e-PTEF membrane</li>
-                        <li>Material weight from 250g/m2 to 1000g/m2</li>
-                        <li>Roll length from 50m to 300m</li>
-                        <li>Shortest delivery time</li>
-                        <li>Customized and developed products as customer’s request</li>
-                    </ul>
-                </div>
             </div>
             <div class="mt-12 sm:mt-16 anim-fade-up">
                 <h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-8 flex items-center gap-3"><div class="section-line"></div>Related Products</h2>
                 <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     ${products.filter(p => p.categoryId === product.categoryId && p.id !== product.id).slice(0, 3).map(p => `
                     <a href="/?product=${p.id}" target="_blank" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer">
-                        <div class="aspect-[3/2] overflow-hidden"><img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover"></div>
-                        <div class="p-5">
-                            <p class="text-xs text-gold-600 font-medium mb-1.5">${categories.find(c => c.id === p.categoryId).name}</p>
-                            <h3 class="text-gray-800 font-semibold mb-2">${p.name}</h3>
-                            <p class="text-gray-400 text-sm line-clamp-2">${p.shortDesc}</p>
-                            <div class="mt-4 flex items-center gap-1 text-gold-600 text-sm font-medium">View Details <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></div>
-                        </div>
+                      <div class="aspect-[3/2] overflow-hidden"><img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover"></div>
+                      <div class="p-5">
+                        <p class="text-xs text-gold-600 font-medium mb-1.5">${categories.find(c => c.id === p.categoryId).name}</p>
+                        <h3 class="text-gray-800 font-semibold mb-2">${p.name}</h3>
+                        <p class="text-gray-400 text-sm line-clamp-2">${p.shortDesc}</p>
+                        <div class="mt-4 flex items-center gap-1 text-gold-600 text-sm font-medium">View Details <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></div>
+                      </div>
                     </a>`).join('')}
                 </div>
             </div>
@@ -760,50 +730,50 @@ function renderCategoryPage(category) {
   const cp = products.filter(p => p.categoryId === category.id);
   document.getElementById('page-category').innerHTML = `
     <div class="page-transition">
-        <div class="bg-cream-50 border-b border-gray-100 py-4 px-4 sm:px-6">
-            <div class="max-w-7xl mx-auto flex items-center gap-2 text-sm flex-wrap">
-                <button onclick="goBack()" class="text-sm px-3 py-1 rounded-md bg-white/90 hover:bg-white transition">Back</button>
-                <a href="javascript:void(0)" onclick="navigateTo('home')" class="text-gray-400 hover:text-gold-600 transition-colors">Home</a>
-                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-300"></i>
-                <a href="javascript:void(0)" onclick="scrollToSection('categories')" class="text-gray-400 hover:text-gold-600 transition-colors">Categories</a>
-                <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-300"></i>
-                <span class="text-gold-600 font-medium">${category.name}</span>
-            </div>
+      <div class="bg-cream-50 border-b border-gray-100 py-4 px-4 sm:px-6">
+        <div class="max-w-7xl mx-auto flex items-center gap-2 text-sm flex-wrap">
+          <button onclick="goBack()" class="text-sm px-3 py-1 rounded-md bg-white/90 hover:bg-white transition">Back</button>
+          <a href="javascript:void(0)" onclick="navigateTo('home')" class="text-gray-400 hover:text-gold-600 transition-colors">Home</a>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-300"></i>
+          <a href="javascript:void(0)" onclick="scrollToSection('categories')" class="text-gray-400 hover:text-gold-600 transition-colors">Categories</a>
+          <i data-lucide="chevron-right" class="w-3.5 h-3.5 text-gray-300"></i>
+          <span class="text-gold-600 font-medium">${category.name}</span>
         </div>
-        <div class="relative h-[280px] sm:h-[380px] overflow-hidden">
-            <img src="${assetPath(category.image)}" alt="${category.name}" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/50 to-gray-900/20"></div>
-            <div class="absolute inset-0 flex items-end">
-                <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-10 w-full">
-                    <div class="flex items-center gap-3 mb-3">
-                        <div class="w-12 h-12 rounded-xl bg-gold-400/20 backdrop-blur flex items-center justify-center border border-gold-400/20"><i data-lucide="${category.icon}" class="w-6 h-6 text-gold-300"></i></div>
-                    </div>
-                    <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">${category.name}</h1>
-                    <p class="text-gray-200 max-w-2xl leading-relaxed">${category.description}</p>
-                </div>
+      </div>
+      <div class="relative h-[280px] sm:h-[380px] overflow-hidden">
+        <img src="${assetPath(category.image)}" alt="${category.name}" class="w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/80 via-gray-900/50 to-gray-900/20"></div>
+        <div class="absolute inset-0 flex items-end">
+          <div class="max-w-7xl mx-auto px-4 sm:px-6 pb-10 w-full">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="w-12 h-12 rounded-xl bg-gold-400/20 backdrop-blur flex items-center justify-center border border-gold-400/20"><i data-lucide="${category.icon}" class="w-6 h-6 text-gold-300"></i></div>
             </div>
+            <h1 class="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-3">${category.name}</h1>
+            <p class="text-gray-200 max-w-2xl leading-relaxed">${category.description}</p>
+          </div>
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-            <h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-10">All Products <span class="text-gray-400 font-normal text-lg">(${cp.length})</span></h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                ${cp.map((p, i) => `
-                <a href="/?product=${p.id}" target="_blank" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${i + 1}">
-                    <div class="aspect-[4/3] overflow-hidden relative">
-                        <img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent"></div>
-                        <div class="absolute top-3 right-3"><span class="px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider gold-bg text-white shadow-lg shadow-gold-500/20">${category.name.split(' ').slice(0, 2).join(' ')}</span></div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-gray-800 font-semibold text-lg mb-2">${p.name}</h3>
-                        <p class="text-gray-400 text-sm leading-relaxed mb-4">${p.shortDesc}</p>
-                        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-                            <div class="flex items-center gap-1 text-gray-400 text-xs"><i data-lucide="thermometer" class="w-3.5 h-3.5"></i>${p.specs['Operating Temp'].split(' ')[0]}</div>
-                            <div class="flex items-center gap-1 text-gold-600 text-sm font-medium">View Details <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></div>
-                        </div>
-                    </div>
-                </a>`).join('')}
+      </div>
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
+        <h2 class="font-display text-2xl sm:text-3xl font-bold text-gray-900 mb-10">All Products <span class="text-gray-400 font-normal text-lg">(${cp.length})</span></h2>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          ${cp.map((p, i) => `
+          <a href="/?product=${p.id}" target="_blank" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${i + 1}">
+            <div class="aspect-[4/3] overflow-hidden relative">
+              <img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/30 to-transparent"></div>
+              <div class="absolute top-3 right-3"><span class="px-3 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider gold-bg text-white shadow-lg shadow-gold-500/20">${category.name.split(' ').slice(0, 2).join(' ')}</span></div>
             </div>
+            <div class="p-6">
+              <h3 class="text-gray-800 font-semibold text-lg mb-2">${p.name}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed mb-4">${p.shortDesc}</p>
+              <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+                <div class="flex items-center gap-1 text-gray-400 text-xs"><i data-lucide="thermometer" class="w-3.5 h-3.5"></i>${p.specs['Operating Temp'].split(' ')[0]}</div>
+                <div class="flex items-center gap-1 text-gold-600 text-sm font-medium">View Details <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></div>
+              </div>
+            </div>
+          </a>`).join('')}
         </div>
+      </div>
     </div>`;
 }
 
@@ -813,14 +783,14 @@ function renderProductsGrid() {
     const cat = categories.find(c => c.id === p.categoryId);
     return `<a href="/?product=${p.id}" target="_blank" rel="noopener noreferrer" class="card overflow-hidden cursor-pointer anim-fade-up delay-${(i % 4) + 1}">
             <div class="aspect-[4/3] overflow-hidden relative">
-                <img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <div class="absolute top-3 left-3"><span class="px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/90 backdrop-blur text-gold-700 border border-gold-200 shadow-sm">${cat.name.split(' ').slice(0, 2).join(' ')}</span></div>
+              <img src="${assetPath(p.image)}" alt="${p.name}" class="card-img w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+              <div class="absolute top-3 left-3"><span class="px-2.5 py-1 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-white/90 backdrop-blur text-gold-700 border border-gold-200 shadow-sm">${cat.name.split(' ').slice(0, 2).join(' ')}</span></div>
             </div>
             <div class="p-5">
-                <h3 class="text-gray-800 font-semibold mb-1.5">${p.name}</h3>
-                <p class="text-gray-400 text-sm line-clamp-2 mb-3">${p.shortDesc}</p>
-                <div class="flex items-center gap-1 text-gold-600 text-xs font-medium">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></div>
+              <h3 class="text-gray-800 font-semibold mb-1.5">${p.name}</h3>
+              <p class="text-gray-400 text-sm line-clamp-2 mb-3">${p.shortDesc}</p>
+              <div class="flex items-center gap-1 text-gold-600 text-xs font-medium">Learn More <i data-lucide="arrow-right" class="w-3 h-3"></i></div>
             </div>
         </a>`;
   }).join('');
@@ -829,29 +799,29 @@ function renderProductsGrid() {
 function renderCategoriesGrid() {
   document.getElementById('categoriesGrid').innerHTML = categories.map((c, i) => `
     <div class="cat-card p-6 sm:p-8 cursor-pointer anim-fade-up delay-${(i % 3) + 1}" onclick="openCategory(${c.id})">
-        <div class="w-14 h-14 rounded-xl bg-gold-50 flex items-center justify-center mb-5 border border-gold-100"><i data-lucide="${c.icon}" class="w-7 h-7 text-gray-400 cat-icon"></i></div>
-        <h3 class="text-gray-800 font-semibold text-lg mb-2">${c.name}</h3>
-        <p class="text-gray-400 text-sm leading-relaxed mb-4">${c.shortDesc}</p>
-        <div class="flex items-center justify-between pt-4 border-t border-gray-100">
-            <span class="text-gray-300 text-xs">${products.filter(p => p.categoryId === c.id).length} Products</span>
-            <div class="flex items-center gap-1 text-gold-600 text-sm font-medium">View All <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></div>
-        </div>
+      <div class="w-14 h-14 rounded-xl bg-gold-50 flex items-center justify-center mb-5 border border-gold-100"><i data-lucide="${c.icon}" class="w-7 h-7 text-gray-400 cat-icon"></i></div>
+      <h3 class="text-gray-800 font-semibold text-lg mb-2">${c.name}</h3>
+      <p class="text-gray-400 text-sm leading-relaxed mb-4">${c.shortDesc}</p>
+      <div class="flex items-center justify-between pt-4 border-t border-gray-100">
+        <span class="text-gray-300 text-xs">${products.filter(p => p.categoryId === c.id).length} Products</span>
+        <div class="flex items-center gap-1 text-gold-600 text-sm font-medium">View All <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></div>
+      </div>
     </div>`).join('');
 }
 
 function renderBlogGrid() {
   document.getElementById('blogGrid').innerHTML = blogPosts.map((b, i) => `
     <div class="blog-card anim-fade-up delay-${(i % 3) + 1}">
-        <div class="aspect-[16/10] overflow-hidden"><img src="${assetPath(b.image)}" alt="${b.title}" class="blog-img w-full h-full object-cover"></div>
-        <div class="p-6">
-            <div class="flex items-center gap-3 mb-3">
-                <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-gold-50 text-gold-700 border border-gold-100">${b.category}</span>
-                <span class="text-gray-300 text-xs">${b.date}</span>
-            </div>
-            <h3 class="text-gray-800 font-semibold mb-2 leading-snug line-clamp-2">${b.title}</h3>
-            <p class="text-gray-400 text-sm leading-relaxed line-clamp-3 mb-4">${b.excerpt}</p>
-            <div class="flex items-center gap-1 text-gold-600 text-sm font-medium cursor-pointer">Read More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></div>
+      <div class="aspect-[16/10] overflow-hidden"><img src="${assetPath(b.image)}" alt="${b.title}" class="blog-img w-full h-full object-cover"></div>
+      <div class="p-6">
+        <div class="flex items-center gap-3 mb-3">
+          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider bg-gold-50 text-gold-700 border border-gold-100">${b.category}</span>
+          <span class="text-gray-300 text-xs">${b.date}</span>
         </div>
+        <h3 class="text-gray-800 font-semibold mb-2 leading-snug line-clamp-2">${b.title}</h3>
+        <p class="text-gray-400 text-sm leading-relaxed line-clamp-3 mb-4">${b.excerpt}</p>
+        <div class="flex items-center gap-1 text-gold-600 text-sm font-medium cursor-pointer">Read More <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i></div>
+      </div>
     </div>`).join('');
 }
 
@@ -859,7 +829,6 @@ function renderBlogGrid() {
 // function showToast(msg) { const t = document.getElementById('toast'); document.getElementById('toastMsg').textContent = msg; t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 4000); }
 function handleQuoteForm(e) { e.preventDefault(); showToast('Quote request submitted! We\'ll respond within 24 hours.'); e.target.reset(); }
 // function handleContactForm(e) { e.preventDefault(); showToast('Message sent successfully! Our team will get back to you soon.'); e.target.reset(); }
-
 
 // Initialize EmailJS (replace with your public key)
 if (window.emailjs && typeof emailjs.init === 'function') {
